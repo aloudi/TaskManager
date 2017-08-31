@@ -1,0 +1,18 @@
+<nav class="navbar">
+
+  <div class="navbar-content">
+
+    <h1>Tasker</h1>
+
+    <div class="profile" ng-if="$ctrl.email">
+      <p>{{$ctrl.email}}</p>
+
+      <div class="profile-dropdown">
+        <a href="#0" ng-click="$ctrl.logOut()">Log Out</a>
+      </div>
+
+    </div>
+
+  </div>
+
+</nav>

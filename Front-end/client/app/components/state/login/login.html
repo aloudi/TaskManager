@@ -1,0 +1,28 @@
+<nav-bar></nav-bar>
+<form name="loginForm" class="login-form">
+  <div class="login-form-wrapper">
+    <input type="email"
+           placeholder="Email"
+           ng-model="$ctrl.loginData.email"
+           ng-required="true" />
+    <input type="password"
+           placeholder="Password"
+           ng-model="$ctrl.loginData.password"
+           ng-required="true"
+           required/>
+    <div class="button-wrapper">
+      <button class="login-form-login-button"
+              ng-click="loginForm.$valid && $ctrl.auth('login')">
+        Login
+      </button>
+      <button class="login-form-sign-up-button"
+              ng-click="loginForm.$valid && $ctrl.auth('signUp')">
+        Sign Up
+      </button>
+    </div>
+  </div>
+</form>
+
+
+
+

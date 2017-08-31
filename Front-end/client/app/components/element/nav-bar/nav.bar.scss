@@ -1,0 +1,59 @@
+.navbar{
+  position: relative;
+  width: 100%;
+  margin: 0;
+  border: 0;
+  display: flex;
+  background: rgba(102,51,153, 0.4);
+}
+
+.navbar-content{
+  flex-grow: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white;
+  display: flex;
+  align-items: stretch;
+
+  h1{
+    text-transform: uppercase;
+    margin: auto 20px;
+    padding: 4px;
+
+  }
+}
+
+.profile {
+
+  p {
+    padding: 4px 4px;
+    margin: 12px 20px 12px 0;
+  }
+
+  .profile-dropdown {
+    display: none;
+    text-align: right;
+    position: absolute;
+    right: 0;
+    background: rgba(102,51,153, 0.4);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    z-index: 1;
+
+    a {
+      color: white;
+      padding: 12px 20px 12px 20px;
+      margin: 0;
+      text-decoration: none;
+      &:hover {
+        background: rgba(220, 220, 220, 0.1);
+      }
+    }
+  }
+
+  &:hover .profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+  }
+}
