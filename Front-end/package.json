@@ -1,5 +1,5 @@
 {
-  "name": "Task manager",
+  "name": "TaskManager",
   "version": "0.0.1",
   "description": "Task manager project",
   "main": "index.js",
