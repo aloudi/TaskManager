@@ -1,0 +1,82 @@
+login{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.login-form{
+  position: relative;
+  z-index: 1;
+  display:flex;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.login-form-wrapper {
+  display: flex;
+  flex-grow: 0.2;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+
+  input {
+    background: rgba(102,51,153, 0.4);
+    text-align: center;
+    color: white;
+    padding: 4px;
+    border: none;
+    border-radius: 6px;
+    margin: 4px;
+  }
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    white;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: white;
+  opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: white;
+  opacity:  1;
+}
+
+.button-wrapper{
+  display: flex;
+  flex-direction: row;
+
+  button{
+    flex-grow: 1;
+    text-align: center;
+    background-color: darkslateblue;
+    color: white;
+    padding: 4px;
+    border: none;
+    border-radius: 6px;
+    margin: 4px;
+  }
+
+  .login-form-sign-up-button{
+    background-color: darkmagenta;
+
+  }
+}
+
+.login-form-top-popup{
+  position: absolute;
+  bottom: 118px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  p{
+    background: rgba(102,51,153, 0.2);
+    text-align: center;
+    color: orangered;
+    padding: 4px;
+    border: none;
+    border-radius: 6px;
+    margin: 4px;
+
+  }
+}

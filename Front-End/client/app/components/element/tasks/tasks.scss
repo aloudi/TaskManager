@@ -1,0 +1,134 @@
+.new-task{
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.new-task-add-button{
+    border: solid 2px lightgray;
+    color: lightgray;
+    border-radius: 6px;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+    padding: 26px;
+    margin: 0;
+    &:hover{
+      border-color: white;
+      color: white;
+    }
+}
+
+.new-task-wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  background: rgba(102, 51, 153, 0.4);
+  border-radius: 6px;
+}
+
+.tasks {
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    list-style-type: none;
+    background: rgba(102, 51, 153, 0.4);
+    border-radius: 6px;
+    margin: 12px 0;
+  }
+}
+
+.tasks-wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.tasks-task {
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  p {
+    padding: 0;
+    margin: 0;
+    white-space: pre-wrap;
+  }
+}
+
+.tasks-mock-box{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+
+.edit-task-input-area{
+  height: auto;
+  overflow-y: hidden;
+  text-align: center;
+  flex-grow: 1;
+  margin: auto 0;
+  background-color: transparent;
+  padding: 0 4px;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.buttons-section {
+  display: flex;
+  .button-wrapper {
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    button {
+      margin: 2px;
+      color: lightgray;
+      border: solid 2px lightgray;
+      background-color: transparent;
+      transition: all 0.2s ease-in-out;
+      &:hover{
+        background: rgba(102, 51, 153, 0.2);
+        border-color: white;
+        color: white;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .main-tasks {
+    li {
+      .task-wrapper{
+        flex-direction: column;
+        .task{
+          margin: 1em;
+        }
+
+        .buttons-section {
+
+          .button-wrapper {
+            width: 100%;
+            flex-direction: row;
+            flex-grow: 1;
+            button{
+              width: 50%;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .edit-task-input-area{
+    margin:1em;
+  }
+
+}
+
+

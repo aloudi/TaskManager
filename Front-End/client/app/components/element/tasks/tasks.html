@@ -1,0 +1,37 @@
+<div class="new-task" ng-init="showNewTaskInput = false" ng-form="inputForm">
+  <button class="new-task-add-button" ng-hide="showNewTaskInput" ng-click="showNewTaskInput = true">add new task</button>
+  <div class="new-task-wrapper" ng-show="showNewTaskInput">
+    <div class="tasks-mock-box"></div>
+    <textarea rows="1" class="edit-task-input-area" auto-focus ng-model="$ctrl.newTask" required>
+      {{ $ctrl.newTask }}
+    </textarea>
+    <div class="buttons-section">
+      <div class="button-wrapper">
+        <button name="confirm" class="button" ng-click="inputForm.$valid && $ctrl.addNewTask()" >confirm</button>
+        <button name="cancel" class="button" ng-click="showNewTaskInput = false">cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="tasks">
+  <ul>
+    <li ng-repeat="task in $ctrl.user.tasks">
+      <!-- task view -->
+      <div class="tasks-wrapper" ng-hide=" $ctrl.editView[ $index ] ">
+        <div class="tasks-mock-box"></div>
+        <div class="tasks-task">
+          <p>{{ task.task }}</p>
+        </div>
+        <div class="buttons-section">
+          <div class="button-wrapper">
+            <button class="button" ng-click="$ctrl.viewSwitcher( $index )">edit</button>
+            <button class="button" ng-click="$ctrl.deleteTask( task._id )">delete</button>
+          </div>
+        </div>
+      </div>
+      <edit-input class="tasks-wrapper" ng-cloak ng-if="$ctrl.editView[ $index ]" task="task" index="$index"
+                  on-edit="$ctrl.editTask( altTask, taskId, index )" on-cancel="$ctrl.viewSwitcher()"></edit-input>
+    </li>
+  </ul>
+</div>
+
