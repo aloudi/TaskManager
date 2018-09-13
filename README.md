@@ -1,4 +1,4 @@
-# Task Manager Test/Portfolio App
+# Task Manager Test
 
 Using Angular.js and ES6, with Gulp and Webpack for the build process on the front-end side, and Express.js with Mongoose and MongoDB for the server. 
 
